@@ -15,12 +15,12 @@ exports.up = function(knex) {
         table.string('event_venue_country').notNullable();
         table.string('event_venue_email');
         table.string('event_venue_phone_number');
-        table.specificType('event_location', 'POINT').notNullable();
+        table.specificType('event_location', 'POINT');
         table.date('event_date').notNullable();
         table.time('event_start_time').notNullable();
         table.decimal('event_sell_through').notNullable();
         table.decimal('event_ticket_price');
-        table.integer('event_price_range').notNullable();
+        table.integer('event_price_range');
         table.string('event_ticket_price_currency').notNullable();
         table.string('event_description').notNullable();
         table.timestamp('created').notNullable().defaultTo(knex.fn.now());
