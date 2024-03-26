@@ -3,7 +3,7 @@
  * @returns { Promise<void> } 
  */
 
-const eventList = require('../seed_data/eventListData');
+const eventList = require('../seed_data/eventsData');
 
 exports.seed = function (knex) {
   return knex('events')

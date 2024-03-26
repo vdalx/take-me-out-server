@@ -35,7 +35,7 @@ router.route('/profile/details')
     .put(updateProfileDetails)
     .delete(deleteProfileDetails);
 
-router.route('/events/saved')
+router.route('/profile/saved-events')
     .get(getSavedEvents)
     .post(addSavedEvents)
     .put(updateSavedEvents)

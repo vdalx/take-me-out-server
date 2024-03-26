@@ -2,8 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const userRoutes = require('./routes/userRoutes');
-const eventRoutes = require('./routes/eventRoutes');
+const userRoutes = require('./routes/usersRoutes');
+const eventRoutes = require('./routes/eventsRoutes');
 
 const PORT = process.env.PORT || 5050;
 const { CORS_ORIGIN } = process.env;
