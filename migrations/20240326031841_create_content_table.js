@@ -8,7 +8,7 @@ exports.up = function(knex) {
         table.string('post_name').notNullable();
         table.string('post_author');
         table.date('post_date').notNullable();
-        table.string('post_location');
+        table.string('post_location').notNullable();
         table.string('post_likes').notNullable();
         table.string('post_tags');
         table.string('post_desc').notNullable();
