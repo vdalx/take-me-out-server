@@ -63,6 +63,13 @@ exports.getUser = (req, res) => {
         .then(data => {
             const currentUser = {
                 username: data[0].username,
+                firstName: data[0].first_name,
+                lastName: data[0].last_name,
+                email: data[0].email,
+                phone_number: data[0].phone_number,
+                location: data[0].location_city,
+                created: data[0].created,
+                modified: data[0].modified
             };
         return res.status(200).json(currentUser);
     }).catch(err => {
