@@ -23,6 +23,7 @@ exports.userSignUp = (req, res) => {
     const userObject = {
         id: uuidv4(),
         username: newUser.username,
+        email: newUser.username,
         password: newUser.password,
     }
 

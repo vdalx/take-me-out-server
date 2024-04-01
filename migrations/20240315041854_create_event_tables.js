@@ -17,7 +17,6 @@ exports.up = function(knex) {
         table.decimal('event_venue_latitude').notNullable();
         table.decimal('event_venue_longitude').notNullable();
         table.string('event_venue_phone_number');
-        table.specificType('event_location', 'POINT');
         table.date('event_date').notNullable();
         table.time('event_start_time').notNullable();
         table.decimal('event_sell_through').notNullable();

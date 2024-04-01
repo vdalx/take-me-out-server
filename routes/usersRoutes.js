@@ -11,7 +11,6 @@ const {
     getProfileDetails,
     addProfileDetails,
     updateProfileDetails,
-    deleteProfileDetails,
     getSavedEvents,
     addSavedEvents,
     updateSavedEvents,
@@ -33,7 +32,6 @@ router.route('/profile/details')
     .get(getProfileDetails)
     .post(addProfileDetails)
     .put(updateProfileDetails)
-    .delete(deleteProfileDetails);
 
 router.route('/profile/saved-events')
     .get(getSavedEvents)
