@@ -9,11 +9,11 @@ const {
     deleteEventsById
     } = require('../controllers/eventsController')
 
-router.route('/events')
+router.route('/')
     .get(getEvents)
     .post(addEvents);
 
-router.route('events/:id')
+router.route('/:id')
     .get(getEventsById)
     .put(updateEventsById)
     .delete(deleteEventsById);
