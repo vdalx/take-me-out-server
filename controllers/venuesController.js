@@ -3,12 +3,12 @@ const { v4: uuidv4 } = require('uuid');
 
 exports.getVenues = (_req, res) => {
     knex('venues')
-    .then((data) => {
-      res.status(200).json(data);
-    })
-    .catch((err) => 
-      res.status(400).send(`Error retrieving events`)
-    );
+        .then((data) => {
+            res.status(200).json(data);
+        })
+        .catch((err) => 
+            res.status(400).send(`Error retrieving events`)
+        );
 };
 
 exports.addVenues = (req, res) => {
@@ -34,9 +34,10 @@ exports.addVenues = (req, res) => {
         !country ||
         !latitude ||
         !longitude ||
-        !likes) {
-        return res.status(400).send(`Please make sure to provide all required fields`);
-    }
+        !likes
+        ) {
+            return res.status(400).send(`Please make sure to provide all required fields`);
+        }
 
     const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const phoneRegex = /(?=\(|\b)(?:\+?1 ?[-.]?)?(?:\(\d{3}\)|\d{3}) ?[-.]? ?\d{3} ?[-.]? ?\d{4}\b/g;
@@ -65,22 +66,22 @@ exports.addVenues = (req, res) => {
         .then((data) => {
             const newVenueUrl = `events/${newVenue.id}`;
             res.status(201).location(newVenueUrl).send(newVenueUrl);
-    })
+        })
         .catch((err) => res.status(400).send(`Error creating event`));
 };
 
 exports.getVenuesById = (req, res) => {
     knex('venues')
-    .where({ id: req.params.id })
-    .then((data) => {
-        if(!data.length) {
-            return res.status(404).send(`Record with id: ${req.params.id} is not found`);
-        }
-        res.status(200).json(data[0]);
-    })
-    .catch((err) =>
-        res.status(400).send(`Error retrieveing event with id ${req.params.id}`)
-);
+        .where({ id: req.params.id })
+        .then((data) => {
+            if(!data.length) {
+                return res.status(404).send(`Record with id: ${req.params.id} is not found`);
+            }
+            res.status(200).json(data[0]);
+        })
+        .catch((err) =>
+            res.status(400).send(`Error retrieveing event with id ${req.params.id}`)
+        );
 };
 
 exports.updateVenuesById = (req, res) => {
@@ -92,9 +93,10 @@ exports.updateVenuesById = (req, res) => {
         !req.body.country ||
         !req.body.latitude ||
         !req.body.longitude ||
-        !req.body.likes) {
-        return res.status(400).send(`Please make sure to provide all required fields`);
-    }
+        !req.body.likes
+        ) {
+            return res.status(400).send(`Please make sure to provide all required fields`);
+        }
 
     const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const phoneRegex = /(?=\(|\b)(?:\+?1 ?[-.]?)?(?:\(\d{3}\)|\d{3}) ?[-.]? ?\d{3} ?[-.]? ?\d{4}\b/g;
@@ -116,12 +118,12 @@ exports.updateVenuesById = (req, res) => {
 
 exports.deleteVenuesById = (req, res) => {
     knex('venues')
-    .delete()
-    .where({ id: req.params.id })
-    .then(() => {
-        res.status(204).send(`Event with id: ${req.params.id} has been deleted`);
-    })
-    .catch((err) =>
-        res.status(400).send(`Error deleting event with id: ${req.params.id}`)
-    );
+        .delete()
+        .where({ id: req.params.id })
+        .then(() => {
+            res.status(204).send(`Event with id: ${req.params.id} has been deleted`);
+        })
+        .catch((err) =>
+            res.status(400).send(`Error deleting event with id: ${req.params.id}`)
+        );
 };

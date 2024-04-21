@@ -147,7 +147,7 @@ exports.updateEventsById = (req, res) => {
 exports.deleteEventsById = (req, res) => {
     knex('events')
         .delete()
-        .where({ id: req.params.id })
+        .where({ 'events.id': req.params.id })
         .then(() => {
             res.status(204).send(`Event with id: ${req.params.id} has been deleted`);
         })

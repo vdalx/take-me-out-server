@@ -27,11 +27,14 @@ exports.userSignUp = (req, res) => {
         password: newUser.password,
     }
 
-    knex('users').insert(userObject).then(data => {
-        return res.status(201).json(true)
-    }).catch(err => {
-        return res.status(500).send('Sever error encountered.');
-    })
+    knex('users')
+        .insert(userObject)
+        .then(data => {
+            return res.status(201).json(true)
+        })
+        .catch(err => {
+            return res.status(500).send('Sever error encountered.');
+        })
 }
 
 exports.userLogin = (req, res) => {
@@ -98,17 +101,78 @@ exports.updateProfileDetails = (req, res) => {
 }
 
 exports.getSavedEvents = (req, res) => {
-
+    knex('user_events')
+        .where({ 'user_events.user_id': req.params.id })
+        .then((data) => {
+            if(!data.length) {
+                return res.status(404).send(`Record with id: ${req.params.id} is not found`);
+            }
+            res.status(200).json(data[0]);
+        })
+        .catch((err) =>
+            res.status(400).send(`Error retrieveing event with id ${req.params.id}`)
+        );
 }
 
 exports.addSavedEvents = (req, res) => {
+    const {
+        user_event_status,
+        user_id,
+        event_id
+    } = req.body
 
+    if (
+        !user_event_status ||
+        !user_id ||
+        !event_id
+        ) {
+            return res.status(400).send(`Please make sure to provide all required fields`);
+        }
+
+    const newSavedEvent = {
+        id: uuidv4(),
+        user_event_status,
+        user_id,
+        event_id
+    }
+
+    knex('user_events')
+    .insert(newSavedEvent)
+    .then((data) => {
+        res.status(201).send(`Event with id: ${req.body.event_id} has been updated`);
+    })
+    .catch((err) => res.status(400).send(`Error creating event`));
 }
 
 exports.updateSavedEvents = (req, res) => {
-    
+    if (
+        !req.body.user_event_status ||
+        !req.body.user_id ||
+        !req.body.event_id
+        ) {
+        return res.status(400).send(`Please make sure to provide all required fields`);
+    }
+
+    knex('user_events')
+        .where({ 'user_events.user_id': req.body.user_id })
+        .where({'user_events.event_id': req.body.event_id })
+        .update(req.body)
+        .then(() => {
+            res.status(200).send(`Event with id: ${req.body.event_id} has been updated`);
+        })
+        .catch((err) =>
+            res.status(400).send(`Error updating event with id: ${req.body.event_id}`)
+    );
 }
 
 exports.deleteSavedEvents = (req, res) => {
-    
+    knex('user_events')
+        .delete()
+        .where({ 'user_events.user_id': req.body.user_id })
+        .then(() => {
+            res.status(204).send(`Event with id: ${req.body.event_id} has been deleted`);
+        })
+        .catch((err) =>
+            res.status(400).send(`Error deleting event with id: ${req.body.event_id}`)
+        );
 }
