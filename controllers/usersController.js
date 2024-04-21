@@ -81,6 +81,22 @@ exports.getUser = (req, res) => {
 };
 
 exports.updateUser = (req, res) => {
+   // if (
+    //    !req.body.username ||
+    //    !req.body.email
+    //    ) {
+    //    return res.status(400).send(`Please make sure to provide all required fields`);
+   // }
+
+  //  knex('users')
+    //    .update(req.body)
+    //    .where({ id: req.userId })
+   //     .then(() => {
+    //        res.status(200).send(`User has been updated`);
+    //    })
+    //    .catch((err) =>
+    //        res.status(400).send(`Error updating user`)
+    //    );
 
 }
 
