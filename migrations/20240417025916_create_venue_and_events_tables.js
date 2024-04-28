@@ -18,6 +18,8 @@ exports.up = function(knex) {
             table.string('email');
             table.string('phone_number');
             table.string('image');
+            table.string('image_attribution');
+            table.string('image_attribution_link');
             table.integer('likes').notNullable();
             table.timestamp('created').notNullable().defaultTo(knex.fn.now());
             table.timestamp('modified').notNullable().defaultTo(knex.fn.now());
