@@ -40,6 +40,8 @@ exports.up = function(knex) {
             table.string('ticket_price_currency').notNullable();
             table.string('description').notNullable();
             table.string('image');
+            table.string('image_attribution');
+            table.string('image_attribution_link');
             table.timestamp('created').notNullable().defaultTo(knex.fn.now());
             table.timestamp('modified').notNullable().defaultTo(knex.fn.now());
         })

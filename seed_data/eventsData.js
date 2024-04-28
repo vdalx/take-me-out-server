@@ -9,7 +9,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 55.00,
         ticket_price_currency: "CAD",
-        description: "Neon Horizon redefines electronic music, blending pulsating beats with ethereal melodies, crafting sonic landscapes that mesmerize. Experience their electrifying performance at Toronto's Massey Hall."
+        description: "Neon Horizon redefines electronic music, blending pulsating beats with ethereal melodies, crafting sonic landscapes that mesmerize. Experience their electrifying performance at Toronto's Massey Hall.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg",
+        image_attribution: "Marcela Laskoski",
+        image_attribution_link: "https://unsplash.com/@marcelalaskoski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "7c79d334-6b90-4052-9def-aa9b8519c9fb",
@@ -20,7 +23,10 @@ module.exports = [
         sell_through: 0.90,
         ticket_price: 60.00,
         ticket_price_currency: "CAD",
-        description: "Prepare to be swept away by the enchanting sounds of Velvet Echo. Lose yourself in a mesmerizing fusion of smooth melodies and soulful rhythms in the heart of Quebec's vibrant metropolis."
+        description: "Prepare to be swept away by the enchanting sounds of Velvet Echo. Lose yourself in a mesmerizing fusion of smooth melodies and soulful rhythms in the heart of Quebec's vibrant metropolis.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/caleb-george-pH88tHG-1yw-unsplash.jpg",
+        image_attribution: "Caleb George",
+        image_attribution_link: "https://unsplash.com/@seemoris?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "eafcb711-a726-4b3c-adec-704e3265c47d",
@@ -31,7 +37,10 @@ module.exports = [
         sell_through: 0.80,
         ticket_price: 50.00,
         ticket_price_currency: "CAD",
-        description: "Journey into the night with Mirage at the Scotiabank Centre in Halifax. Let the ethereal tunes of this captivating band transport you to a world where dreams meet reality."
+        description: "Journey into the night with Mirage at the Scotiabank Centre in Halifax. Let the ethereal tunes of this captivating band transport you to a world where dreams meet reality.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/daniel-wirtz-jmmTlAPtNw8-unsplash.jpg",
+        image_attribution: "Daniel Wirtz",
+        image_attribution_link: "https://unsplash.com/@danielwirtz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "72c826ba-fde0-4aae-9aaf-95c6072946cd",
@@ -42,7 +51,10 @@ module.exports = [
         sell_through: 0.95,
         ticket_price: 65.00,
         ticket_price_currency: "CAD",
-        description: "Immerse yourself in the dreamy atmosphere of Electric Dreamers at Rogers Arena. Surrender to the enchanting soundscape crafted by this dynamic band against the backdrop of British Columbia's stunning coastal city."
+        description: "Immerse yourself in the dreamy atmosphere of Electric Dreamers at Rogers Arena. Surrender to the enchanting soundscape crafted by this dynamic band against the backdrop of British Columbia's stunning coastal city.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/austin-neill-_uzJEiPETvY-unsplash.jpg",
+        image_attribution: "Austin Neill",
+        image_attribution_link: "https://unsplash.com/@arstyy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "019da03d-1162-48a4-ad48-ed655e3d7301",
@@ -53,7 +65,10 @@ module.exports = [
         sell_through: 0.90,
         ticket_price: 70.00,
         ticket_price_currency: "CAD",
-        description: "Experience audio euphoria with Echoes at the Scotiabank Arena in Toronto. Their harmonious melodies promise an evening of pure musical bliss."
+        description: "Experience audio euphoria with Echoes at the Scotiabank Arena in Toronto. Their harmonious melodies promise an evening of pure musical bliss.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/austin-neill-sxxnM-tRlVg-unsplash.jpg",
+        image_attribution: "Austin Neill",
+        image_attribution_link: "https://unsplash.com/@arstyy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "705b808f-d8a0-4713-a796-8653c5c5952b",
@@ -64,7 +79,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 60.00,
         ticket_price_currency: "CAD",
-        description: "Witness the breathtaking spectacle of Aurora Borealis at Bell MTS Place in Winnipeg. Lose yourself in their ethereal melodies as they illuminate the night with their spellbinding performance."
+        description: "Witness the breathtaking spectacle of Aurora Borealis at Bell MTS Place in Winnipeg. Lose yourself in their ethereal melodies as they illuminate the night with their spellbinding performance.",
+        image: "https://ik.imagekit.io/enxdlva/takemeout/event-images/jorge-zapata-ajLlK5qL6Ic-unsplash.jpg",
+        image_attribution: "Jorge Zapata",
+        image_attribution_link: "https://unsplash.com/@jorgezapatag?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "f19b0b8a-9cca-4567-9af7-4016a15e038a",
@@ -75,7 +93,10 @@ module.exports = [
         sell_through: 0.80,
         ticket_price: 45.00,
         ticket_price_currency: "CAD",
-        description: "Feel the heat rise with Dreamwave at the Scotiabank Centre in Halifax. Get ready for an adrenaline-fueled night as this dynamic band ignites the stage, promising an unforgettable experience."
+        description: "Feel the heat rise with Dreamwave at the Scotiabank Centre in Halifax. Get ready for an adrenaline-fueled night as this dynamic band ignites the stage, promising an unforgettable experience.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/toa-heftiba-MRvBKn_ZlMM-unsplash.jpg",
+        image_attribution: "Toa Heftiba",
+        image_attribution_link: "https://unsplash.com/@heftiba?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "2cba0296-c77d-4758-9115-bd98ac18f2c0",
@@ -86,7 +107,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 55.00,
         ticket_price_currency: "CAD",
-        description: "Get swept away by the orchestral grandeur of this dynamic ensemble. Wildfire Symphony promises a fiery performance in Canada's capital."
+        description: "Get swept away by the orchestral grandeur of this dynamic ensemble. Wildfire Symphony promises a fiery performance in Canada's capital.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/alex-padurariu-WypHPk6lBFQ-unsplash.jpg",
+        image_attribution: "Alex Padurariu",
+        image_attribution_link: "https://unsplash.com/@alexpadurariu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "e202e167-d242-4d7f-b8fc-68caffef9e01",
@@ -97,7 +121,10 @@ module.exports = [
         sell_through: 0.88,
         ticket_price: 75.00,
         ticket_price_currency: "CAD",
-        description: "Feel the pulse of the city with Electric Pulse at the Scotiabank Arena in Toronto. Join the rhythmic journey of this electrifying band as they promise an unforgettable evening."
+        description: "Feel the pulse of the city with Electric Pulse at the Scotiabank Arena in Toronto. Join the rhythmic journey of this electrifying band as they promise an unforgettable evening.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/matt-palmer-XLAeDbI52Ek-unsplash.jpg",
+        image_attribution: "Matt Palmer",
+        image_attribution_link: "https://unsplash.com/@mattpalmer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "079c88df-ed32-4d88-a9b7-eaebc85c4ce2",
@@ -108,7 +135,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 70.00,
         ticket_price_currency: "CAD",
-        description: "Sirens blends rock, folk, and soul, delivering powerful melodies and evocative lyrics. Dive into their emotional journey at Vogue Theatre for an unforgettable experience in Vancouver."
+        description: "Sirens blends rock, folk, and soul, delivering powerful melodies and evocative lyrics. Dive into their emotional journey at Vogue Theatre for an unforgettable experience in Vancouver.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/eric-nopanen-8e0EHPUx3Mo-unsplash.jpg?updatedAt=1714317514277",
+        image_attribution: "Eric Nopanen",
+        image_attribution_link: "https://unsplash.com/@rexcuando?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "56c8e94c-777d-4176-b7fd-02f0806f614a",
@@ -119,7 +149,10 @@ module.exports = [
         sell_through: 0.90,
         ticket_price: 60.00,
         ticket_price_currency: "CAD",
-        description: "Immerse yourself in the sounds of Solaris at the Scotiabank Centre in Halifax. Journey through the cosmos with this captivating band as they weave a tapestry of melodies under the starry skies of Nova Scotia."
+        description: "Immerse yourself in the sounds of Solaris at the Scotiabank Centre in Halifax. Journey through the cosmos with this captivating band as they weave a tapestry of melodies under the starry skies of Nova Scotia.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/anthony-delanoix-hzgs56Ze49s-unsplash.jpg",
+        image_attribution: "Anthony Delanoix",
+        image_attribution_link: "https://unsplash.com/@anthonydelanoix?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "2c0185c7-89ef-48ad-a22f-9fc022a5c90c",
@@ -130,7 +163,10 @@ module.exports = [
         sell_through: 0.88,
         ticket_price: 65.00,
         ticket_price_currency: "CAD",
-        description: "Dive into a world of rhythm and melody with Cascade Beats, promising a thrilling performance in Canada's capital."
+        description: "Dive into a world of rhythm and melody with Cascade Beats, promising a thrilling performance in Canada's capital.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/chris-zhang-uGh-hHVPRYI-unsplash.jpg",
+        image_attribution: "Chris Zhang",
+        image_attribution_link: "https://unsplash.com/@chriszhang0806?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "f3e13429-b5e9-4a50-b01c-75fb07cefded",
@@ -141,7 +177,10 @@ module.exports = [
         sell_through: 0.90,
         ticket_price: 50.00,
         ticket_price_currency: "GBP",
-        description: "Stellar delivers electrifying energy and soulful melodies on stage. Don't miss their upcoming London show for powerful riffs and an unforgettable performance!"
+        description: "Stellar delivers electrifying energy and soulful melodies on stage. Don't miss their upcoming London show for powerful riffs and an unforgettable performance!",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/yannis-papanastasopoulos-yWF2LLan-_o-unsplash.jpg",
+        image_attribution: "Yannis Papanastasopoulos",
+        image_attribution_link: "https://unsplash.com/@yannispap?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "3b042051-f18c-4a16-a393-68ceba87277a",
@@ -152,7 +191,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 45.00,
         ticket_price_currency: "GBP",
-        description: "Tides storms in with thunderous hard rock riffs, delivering raw energy and fierce stage presence. With a tidal wave of sound, Tides promises an unforgettable experience that will shake you to the core."
+        description: "Tides storms in with thunderous hard rock riffs, delivering raw energy and fierce stage presence. With a tidal wave of sound, Tides promises an unforgettable experience that will shake you to the core.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/melanie-van-leeuwen-QA-qQfWJM0E-unsplash.jpg",
+        image_attribution: "Melanie van Leeuwen",
+        image_attribution_link: "https://unsplash.com/@strompictures?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "4d6ce289-eb58-45a1-bae3-e3874290ee48",
@@ -163,7 +205,10 @@ module.exports = [
         sell_through: 0.95,
         ticket_price: 55.00,
         ticket_price_currency: "GBP",
-        description: "Lilies melds folk and pop, weaving delicate melodies and heartfelt lyrics. Their music evokes emotion, guiding listeners through love, longing, and introspection. Experience their captivating harmonies live in London."
+        description: "Lilies melds folk and pop, weaving delicate melodies and heartfelt lyrics. Their music evokes emotion, guiding listeners through love, longing, and introspection. Experience their captivating harmonies live in London.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/te-nguyen-Wt7XT1R6sjU-unsplash.jpg",
+        image_attribution: "Te NGuyen",
+        image_attribution_link: "https://unsplash.com/@tenguyen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "d3c08f85-4570-48e1-88df-610614477359",
@@ -174,7 +219,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 50.00,
         ticket_price_currency: "GBP",
-        description: "Supernova, master of electronic beats, fuels dance floors with energy. With catchy rhythms and infectious melodies, prepare for a journey as every track ignites the night. Get ready for an unforgettable experience! "
+        description: "Supernova, master of electronic beats, fuels dance floors with energy. With catchy rhythms and infectious melodies, prepare for a journey as every track ignites the night. Get ready for an unforgettable experience!",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/austin-neill-hgO1wFPXl3I-unsplash.jpg",
+        image_attribution: "Austin Neill",
+        image_attribution_link: "https://unsplash.com/@arstyy?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "043a70e2-cf28-4ce1-a9a4-e5b3fac9c593",
@@ -185,7 +233,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 60.00,
         ticket_price_currency: "GBP",
-        description: "Electric Symphony, the dynamic DJ duo, electrifies crowds with pulsating beats and euphoric melodies. Prepare for a sonic journey as they blend genres promising an unforgettable night of music and energy."
+        description: "Electric Symphony, the dynamic DJ duo, electrifies crowds with pulsating beats and euphoric melodies. Prepare for a sonic journey as they blend genres promising an unforgettable night of music and energy.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/wesley-tingey-Q5ugrfN4oHk-unsplash.jpg",
+        image_attribution: "Wesley Tingey",
+        image_attribution_link: "https://unsplash.com/@wesleyphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "66327933-ce38-47e0-9bfe-5d29048bacae",
@@ -196,7 +247,10 @@ module.exports = [
         sell_through: 0.90,
         ticket_price: 55.00,
         ticket_price_currency: "GBP",
-        description: "Crystal Harmony merges folk and electronic, captivating with ethereal melodies and organic rhythms. A sonic journey where tradition meets innovation, resonating deeply within the soul."
+        description: "Crystal Harmony merges folk and electronic, captivating with ethereal melodies and organic rhythms. A sonic journey where tradition meets innovation, resonating deeply within the soul.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/valentin-lacoste-YII9O3qEz3s-unsplash.jpg",
+        image_attribution: "Valentin Lacoste",
+        image_attribution_link: "https://unsplash.com/@valentinlacoste?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "70ca48a6-93e2-4ff0-b3a2-f5a38f1a043e",
@@ -207,7 +261,10 @@ module.exports = [
         sell_through: 0.88,
         ticket_price: 65.00,
         ticket_price_currency: "GBP",
-        description: "Reveries invites listeners into a world of dreamy melodies and introspective lyrics. Join their sonic journey of self-discovery where every chord resonates with dreams and desires."
+        description: "Reveries invites listeners into a world of dreamy melodies and introspective lyrics. Join their sonic journey of self-discovery where every chord resonates with dreams and desires.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/ana-grave-gHcWaeldgtQ-unsplash.jpg",
+        image_attribution: "Ana Grave",
+        image_attribution_link: "https://unsplash.com/@anagrave?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "e02f302a-c67c-4600-bf12-e364b59b80ea",
@@ -218,7 +275,10 @@ module.exports = [
         sell_through: 0.90,
         ticket_price: 60.00,
         ticket_price_currency: "GBP",
-        description: "Strawberry Lemonade infuses her performances with a refreshing blend of sweetness and zest. With a voice as vibrant as summer, she takes audiences on a tantalizing journey through melody."
+        description: "Strawberry Lemonade infuses her performances with a refreshing blend of sweetness and zest. With a voice as vibrant as summer, she takes audiences on a tantalizing journey through melody.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/Ombre%20Balloons.jpg",
+        image_attribution: "Amy Shamblen",
+        image_attribution_link: "https://unsplash.com/@amyshamblen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "d3d7aa3c-6e27-4ab0-9496-f95faa5042f0",
@@ -229,7 +289,10 @@ module.exports = [
         sell_through: 0.85,
         ticket_price: 55.00,
         ticket_price_currency: "GBP",
-        description: "Ellipsis defies genres with ethereal soundscapes, blending dreamy melodies into intricate layers. Each performance invites a journey of introspection and emotion."
+        description: "Ellipsis defies genres with ethereal soundscapes, blending dreamy melodies into intricate layers. Each performance invites a journey of introspection and emotion.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/alexandre-st-louis-IlfpKwRMln0-unsplash.jpg?updatedAt=1711126482254",
+        image_attribution: "Alexandre St-Louis",
+        image_attribution_link: "https://unsplash.com/@alxstls?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "828c12d1-c0dd-4fd4-b8db-ac8eb493f8f8",
@@ -240,7 +303,10 @@ module.exports = [
         sell_through: 0.88,
         ticket_price: 50.00,
         ticket_price_currency: "GBP",
-        description: "Cosmic Odyssey sparks stages with infectious pop-punk energy, blasting listeners into outer space with cosmic melodies and raw lyrics. Join the odyssey for anthems of rebellion and heartache."
+        description: "Cosmic Odyssey sparks stages with infectious pop-punk energy, blasting listeners into outer space with cosmic melodies and raw lyrics. Join the odyssey for anthems of rebellion and heartache.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/wyanna-wenceslao-UBqwLun5RFU-unsplash.jpg",
+        image_attribution: "Wyanna Wenceslao",
+        image_attribution_link: "https://unsplash.com/@wenceyanna?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
     {
         id: "b6abe52c-05be-4c90-b39a-d9decefd4274",
@@ -251,6 +317,9 @@ module.exports = [
         sell_through: 0.90,
         ticket_price: 75.00,
         ticket_price_currency: "GBP",
-        description: "Ivy blends pop, rock, folk, and a sprinkle of magic into enchanting melodies. Her ethereal voice transports listeners to whimsical realms, promising a spellbinding experience that lingers."
+        description: "Ivy blends pop, rock, folk, and a sprinkle of magic into enchanting melodies. Her ethereal voice transports listeners to whimsical realms, promising a spellbinding experience that lingers.",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/vidar-nordli-mathisen-CTlRgg7Gfmw-unsplash.jpg",
+        image_attribution: "Vidar Nordli-Mathisen",
+        image_attribution_link: "https://unsplash.com/@vidarnm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     }
 ]

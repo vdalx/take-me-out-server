@@ -11,6 +11,7 @@ module.exports = [
         latitude: 43.6544,
         longitude: -79.3807,
         email: "contactus@mh-rth.com",
+        image: "https://ik.imagekit.io/enxdlva/venue-images/takemeout/verne-ho-tXICOsK8Duc-unsplash.jpg",
         likes: 0
     },
     {
@@ -24,6 +25,7 @@ module.exports = [
         latitude: 45.5144,
         longitude: -73.5628,
         email: "billetterie@olympiamontreal.com",
+        image: "",
         likes: 0
     },
     {
@@ -37,6 +39,7 @@ module.exports = [
         latitude: 44.6498,
         longitude: -63.5752,
         email: "info@scotiabank-centre.com",
+        image: "https://ik.imagekit.io/enxdlva/venue-images/takemeout/snap-shoot-cLw524a8tno-unsplash.jpg",
         likes: 0
     },
     {
@@ -63,6 +66,7 @@ module.exports = [
         latitude: 43.6435,
         longitude: -79.3791,
         email: "info@scotiabankarena.com",
+        image: "https://ik.imagekit.io/enxdlva/venue-images/takemeout/2560px-Scotiabank_Arena_-_2018_(cropped).jpg",
         likes: 0
     },
     {
@@ -76,6 +80,7 @@ module.exports = [
         latitude: 49.8918,
         longitude: -97.1444,
         email: "info@bellmtsplace.ca",
+        image:"https://ik.imagekit.io/enxdlva/venue-images/takemeout/MTS_CENTRE_b.jpg",
         likes: 0
     },
     {
@@ -115,6 +120,7 @@ module.exports = [
         latitude: 49.2793,
         longitude: -123.1224,
         email: "info@voguetheatre.com",
+        image: "https://ik.imagekit.io/enxdlva/venue-images/takemeout/Vogue%20theater%20in%20Vancouver%20....jpg?",
         likes: 0
     },
     {
