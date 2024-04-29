@@ -80,7 +80,7 @@ module.exports = [
         ticket_price: 60.00,
         ticket_price_currency: "CAD",
         description: "Witness the breathtaking spectacle of Aurora Borealis at Bell MTS Place in Winnipeg. Lose yourself in their ethereal melodies as they illuminate the night with their spellbinding performance.",
-        image: "https://ik.imagekit.io/enxdlva/takemeout/event-images/jorge-zapata-ajLlK5qL6Ic-unsplash.jpg",
+        image: "https://ik.imagekit.io/enxdlva/event-images/takemeout/jorge-zapata-ajLlK5qL6Ic-unsplash.jpg",
         image_attribution: "Jorge Zapata",
         image_attribution_link: "https://unsplash.com/@jorgezapatag?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
     },
