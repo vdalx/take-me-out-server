@@ -14,7 +14,7 @@ module.exports = [
     },
     {
         id: "f516e1c9-486a-40c2-9bed-c8eba070f1f6",
-        post_name: "Favorite Music Venues: Where the Magic Happens",
+        post_name: "Shows at our Favorite Music Venues: Where the Magic Happens",
         date: "2024-03-24",
         location: "United Kingdom",
         likes: 38,
