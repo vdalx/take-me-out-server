@@ -8,15 +8,14 @@ exports.up = function(knex) {
             table.uuid('id').primary();
             table.string('post_name').notNullable();
             table.string('post_author');
-            table.date('date').notNullable();
-            table.string('location').notNullable();
-            table.string('likes').notNullable();
-            table.string('tags');
+            table.date('post_date').notNullable();
+            table.string('post_location').notNullable();
+            table.string('post_likes').notNullable();
             table.string('post_desc').notNullable();
             table.text('post_body', ["longtext"]).notNullable();
-            table.string('image');
-            table.string('image_attribution');
-            table.string('image_attribution_link');
+            table.string('post_image');
+            table.string('post_image_attribution');
+            table.string('post_image_attribution_link');
             table.timestamp('created').notNullable().defaultTo(knex.fn.now());
             table.timestamp('modified').notNullable().defaultTo(knex.fn.now());
         }).createTable('content_lists', (table) => {
@@ -29,37 +28,7 @@ exports.up = function(knex) {
                 .onUpdate('CASCADE')
                 .onDelete('CASCADE');
             table
-                .uuid('event_id_1')
-                .references('id')
-                .inTable('events')
-                .onUpdate('CASCADE')
-                .onDelete('CASCADE');
-            table
-                .uuid('event_id_2')
-                .references('id')
-                .inTable('events')
-                .onUpdate('CASCADE')
-                .onDelete('CASCADE');
-            table
-                .uuid('event_id_3')
-                .references('id')
-                .inTable('events')
-                .onUpdate('CASCADE')
-                .onDelete('CASCADE');
-            table
-                .uuid('event_id_4')
-                .references('id')
-                .inTable('events')
-                .onUpdate('CASCADE')
-                .onDelete('CASCADE');
-            table
-                .uuid('event_id_5')
-                .references('id')
-                .inTable('events')
-                .onUpdate('CASCADE')
-                .onDelete('CASCADE');
-            table
-                .uuid('event_id_6')
+                .uuid('event_id')
                 .references('id')
                 .inTable('events')
                 .onUpdate('CASCADE')

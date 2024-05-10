@@ -27,7 +27,7 @@ exports.up = function(knex) {
         .createTable('events', (table) => {
             table.uuid('id').primary();
             table.string('event_name').notNullable();
-            table.date('date').notNullable();
+            table.date('event_date').notNullable();
             table
               .uuid('venue_id')
               .notNullable()
@@ -40,10 +40,10 @@ exports.up = function(knex) {
             table.decimal('ticket_price').notNullable();
             table.integer('price_range');
             table.string('ticket_price_currency').notNullable();
-            table.string('description').notNullable();
-            table.string('image');
-            table.string('image_attribution');
-            table.string('image_attribution_link');
+            table.string('event_desc').notNullable();
+            table.string('event_image');
+            table.string('event_image_attribution');
+            table.string('event_image_attribution_link');
             table.timestamp('created').notNullable().defaultTo(knex.fn.now());
             table.timestamp('modified').notNullable().defaultTo(knex.fn.now());
         })
