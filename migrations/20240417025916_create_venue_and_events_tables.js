@@ -8,19 +8,19 @@ exports.up = function(knex) {
         .createTable('venues', (table) => {
             table.uuid('id').primary();
             table.string('venue_name').notNullable();
-            table.string('address').notNullable();
-            table.string('city').notNullable();
-            table.string('state');
-            table.string('postal_code').notNullable();
-            table.string('country').notNullable();
-            table.decimal('latitude').notNullable();
-            table.decimal('longitude').notNullable();
-            table.string('email');
-            table.string('phone_number');
-            table.string('image');
-            table.string('image_attribution');
-            table.string('image_attribution_link');
-            table.integer('likes').notNullable();
+            table.string('venue_address').notNullable();
+            table.string('venue_city').notNullable();
+            table.string('venue_state');
+            table.string('venue_postal_code').notNullable();
+            table.string('venue_country').notNullable();
+            table.decimal('venue_latitude').notNullable();
+            table.decimal('venue_longitude').notNullable();
+            table.string('venue_email');
+            table.string('venue_phone_number');
+            table.string('venue_image');
+            table.string('venue_image_attribution');
+            table.string('venue_image_attribution_link');
+            table.integer('venue_likes').notNullable();
             table.timestamp('created').notNullable().defaultTo(knex.fn.now());
             table.timestamp('modified').notNullable().defaultTo(knex.fn.now());
         })

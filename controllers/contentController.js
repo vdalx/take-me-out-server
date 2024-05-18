@@ -26,8 +26,8 @@ exports.getContent = (_req, res) => {
             'events.event_image_attribution_link',
             'events.venue_id',
             'venues.venue_name',
-            'venues.address',
-            'venues.city',
+            'venues.venue_address',
+            'venues.venue_city',
         )
         .join('content_lists', 'content.id', 'content_lists.content_id')
         .join('events','content_lists.event_id', 'events.id')
