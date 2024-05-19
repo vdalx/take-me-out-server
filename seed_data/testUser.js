@@ -6,5 +6,7 @@ module.exports = [
         password: "$2b$10$p.asbjsd.mn3FtrNgrJgDuQSkNy6Cq/RhxxXL1GWHHImkr.xHzEEG",
         first_name: "Jane",
         last_name: "Smith",
+        location_city: "London",
+        location_country: "United Kingdom"
     }
 ]

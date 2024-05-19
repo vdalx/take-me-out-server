@@ -25,6 +25,25 @@ exports.up = function(knex) {
             table.timestamp('created').notNullable().defaultTo(knex.fn.now());
             table.timestamp('modified').notNullable().defaultTo(knex.fn.now());
         })
+        .createTable('user_venues', (table) => {
+            table.uuid('id').primary();
+            table
+                .uuid('user_id')
+                .notNullable()
+                .references('id')
+                .inTable('users')
+                .onUpdate('CASCADE')
+                .onDelete('CASCADE');
+            table
+                .uuid('venue_id')
+                .notNullable()
+                .references('id')
+                .inTable('events')
+                .onUpdate('CASCADE')
+                .onDelete('CASCADE');
+            table.timestamp('created').notNullable().defaultTo(knex.fn.now());
+            table.timestamp('modified').notNullable().defaultTo(knex.fn.now());
+        })
 };
 
 /**
@@ -33,5 +52,6 @@ exports.up = function(knex) {
  */
 exports.down = function(knex) {
     return knex.schema
+        .dropTable('user_venues')
         .dropTable('user_events')
 };
