@@ -48,6 +48,7 @@ exports.getContentById = (req, res) => {
             'events.event_name',
             'events.event_date',
             'events.ticket_price',
+            'events.sell_through',
             'events.event_desc',
             'events.event_image',
             'events.event_image_attribution',
@@ -94,14 +95,15 @@ exports.getContentById = (req, res) => {
                             id: i.event_id,
                             event_name: i.event_name,
                             event_date: i.event_date,
-                            event_price: i.ticket_price,
+                            sell_through: i.sell_through,
+                            ticket_price: i.ticket_price,
                             event_desc: i.event_desc,
                             event_image: i.event_image,
                             event_image_attribution: i.event_image_attribution,
                             event_image_attribution_link: i.event_image_attribution_link,
                             venue_name: i.venue_name,
-                            venue_address: i.address,
-                            venue_city: i.city,
+                            venue_address: i.venue_address,
+                            venue_city: i.venue_city,
                         }
                         x.post_events.push(eventObj);
                     }
