@@ -18,7 +18,7 @@ const {
     getSavedVenues,
     addSavedVenues,
     updateSavedVenues,
-    deleteSavedVenues,
+    deleteSavedVenues
 } = require('../controllers/usersController');
 
 router.route('/signup')

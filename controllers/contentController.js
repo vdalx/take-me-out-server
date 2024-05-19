@@ -15,6 +15,34 @@ exports.getContent = (_req, res) => {
             'content.post_image',
             'content.post_image_attribution',
             'content.post_image_attribution_link',
+        )
+        .then((data) => {
+            res.status(200).json(data);
+        })
+        .catch((err) =>
+            res.status(400).send(`Error retrieving events`)
+    );
+};
+
+exports.addContent = (req, res) => {
+
+};
+
+exports.getContentById = (req, res) => {
+    knex('content')
+        .where({ 'content.id': req.params.id })
+        .select(
+            'content.id',
+            'content.post_name',
+            'content.post_author',
+            'content.post_date',
+            'content.post_location',
+            'content.post_likes',
+            'content.post_desc',
+            'content.post_body',
+            'content.post_image',
+            'content.post_image_attribution',
+            'content.post_image_attribution_link',
             'content_lists.content_id',
             'content_lists.event_id',
             'events.event_name',
@@ -33,6 +61,10 @@ exports.getContent = (_req, res) => {
         .join('events','content_lists.event_id', 'events.id')
         .join('venues', 'events.venue_id', 'venues.id')
         .then((data) => {
+            if(!data.length) {
+                return res.status(404).send(`Record with id: ${req.params.id} is not found`);
+            }
+
             const originalPostArr = data;
 
             const postArr = originalPostArr.map(post => ({
@@ -59,7 +91,7 @@ exports.getContent = (_req, res) => {
                     if ( i.id === x.post_id) {
                         const eventObj = 
                         {
-                            event_id: i.event_id,
+                            id: i.event_id,
                             event_name: i.event_name,
                             event_date: i.event_date,
                             event_price: i.ticket_price,
@@ -76,28 +108,10 @@ exports.getContent = (_req, res) => {
                 })
             });
 
-            res.status(200).json(uniquePostArr);
+            res.status(200).json(uniquePostArr[0]);
         })
         .catch((err) =>
-            res.status(400).send(`Error retrieving events`)
-    );
-};
-
-exports.addContent = (req, res) => {
-
-};
-
-exports.getContentById = (req, res) => {
-    knex('content')
-        .where({ id: req.params.id })
-        .then((data) => {
-            if(!data.length) {
-                return res.status(404).send(`Record with id: ${req.params.id} is not found`);
-            }
-            res.status(200).json(data[0]);
-        })
-        .catch((err) =>
-            res.status(400).send(`Error retrieveing content with id ${req.params.id}`)
+            res.status(400).send(`Error retrieveing content with id ${req.params.id}, ${err}`)
         );
 };
 

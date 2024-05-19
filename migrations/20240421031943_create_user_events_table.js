@@ -38,7 +38,7 @@ exports.up = function(knex) {
                 .uuid('venue_id')
                 .notNullable()
                 .references('id')
-                .inTable('events')
+                .inTable('venues')
                 .onUpdate('CASCADE')
                 .onDelete('CASCADE');
             table.timestamp('created').notNullable().defaultTo(knex.fn.now());

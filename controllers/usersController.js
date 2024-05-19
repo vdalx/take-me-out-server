@@ -35,7 +35,7 @@ exports.userSignUp = (req, res) => {
         .catch(err => {
             return res.status(500).send('Sever error encountered.');
         })
-}
+};
 
 exports.userLogin = (req, res) => {
     const user = req.body;
@@ -98,7 +98,7 @@ exports.updateUser = (req, res) => {
     //        res.status(400).send(`Error updating user`)
     //    );
 
-}
+};
 
 exports.deleteUser = (req, res) => {
 
@@ -106,15 +106,15 @@ exports.deleteUser = (req, res) => {
 
 exports.getProfileDetails = (req, res) => {
 
-}
+};
 
 exports.addProfileDetails = (req, res) => {
 
-}
+};
 
 exports.updateProfileDetails = (req, res) => {
     
-}
+};
 
 exports.getSavedEvents = (req, res) => {
     knex('user_events')
@@ -128,7 +128,7 @@ exports.getSavedEvents = (req, res) => {
         .catch((err) =>
             res.status(400).send(`Error retrieveing event with id ${req.params.id}`)
         );
-}
+};
 
 // user_event_status to be either saved or confirmed
 exports.addSavedEvents = (req, res) => {
@@ -159,7 +159,7 @@ exports.addSavedEvents = (req, res) => {
         res.status(201).send(`Event with id: ${req.body.event_id} has been updated`);
     })
     .catch((err) => res.status(400).send(`Error creating event`));
-}
+};
 
 exports.updateSavedEvents = (req, res) => {
     if (
@@ -180,7 +180,7 @@ exports.updateSavedEvents = (req, res) => {
         .catch((err) =>
             res.status(400).send(`Error updating event with id: ${req.body.event_id}`)
     );
-}
+};
 
 exports.deleteSavedEvents = (req, res) => {
     knex('user_events')
@@ -192,7 +192,7 @@ exports.deleteSavedEvents = (req, res) => {
         .catch((err) =>
             res.status(400).send(`Error deleting event with id: ${req.body.event_id}`)
         );
-}
+};
 
 exports.getSavedVenues = (req, res) => {
     knex('user_venues')
@@ -206,7 +206,7 @@ exports.getSavedVenues = (req, res) => {
         .catch((err) =>
             res.status(400).send(`Error retrieveing event with id ${req.params.id}`)
         );
-}
+};
 
 exports.addSavedVenues = (req, res) => {
     const {
@@ -233,7 +233,11 @@ exports.addSavedVenues = (req, res) => {
         res.status(201).send(`Event with id: ${req.body.venue_id} has been updated`);
     })
     .catch((err) => res.status(400).send(`Error creating event`));
-}
+};
+
+exports.updateSavedVenues = (req, res) => {
+
+};
 
 exports.deleteSavedVenues = (req, res) => {
     knex('user_venues')
@@ -245,4 +249,4 @@ exports.deleteSavedVenues = (req, res) => {
         .catch((err) =>
             res.status(400).send(`Error deleting event with id: ${req.body.venue_id}`)
         );
-}
+};
