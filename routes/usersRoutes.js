@@ -14,7 +14,11 @@ const {
     getSavedEvents,
     addSavedEvents,
     updateSavedEvents,
-    deleteSavedEvents
+    deleteSavedEvents,
+    getSavedVenues,
+    addSavedVenues,
+    updateSavedVenues,
+    deleteSavedVenues
 } = require('../controllers/usersController');
 
 router.route('/signup')
@@ -38,5 +42,11 @@ router.route('/profile/saved-events')
     .post(addSavedEvents)
     .put(updateSavedEvents)
     .delete(deleteSavedEvents);
+
+router.route('/profile/saved-venues')
+    .get(getSavedVenues)
+    .post(addSavedVenues)
+    .put(updateSavedVenues)
+    .delete(deleteSavedVenues);
 
 module.exports = router;
