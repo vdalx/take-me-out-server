@@ -126,6 +126,7 @@ exports.getSavedEvents = (req, res) => {
             'events.event_name',
             'events.event_date',
             'events.ticket_price',
+            'events.ticket_price_currency',
             'events.sell_through',
             'events.event_desc',
             'events.event_image',
@@ -135,14 +136,49 @@ exports.getSavedEvents = (req, res) => {
             'venues.venue_name',
             'venues.venue_address',
             'venues.venue_city',
+            'venues.venue_postal_code',
+            'venues.venue_country',
+            'venues.venue_latitude',
+            'venues.venue_longitude',
+            'venues.venue_email',
         )
         .join('events','user_events.event_id', 'events.id')
         .join('venues', 'events.venue_id', 'venues.id')
         .then((data) => {
+
             if(!data.length) {
                 return res.status(404).send(`Record with id: ${req.userId} is not found`);
             }
-            res.status(200).json(data);
+
+            const originalUserEventsArr = data;
+
+            const userEventsArr = originalUserEventsArr.map(event => ({
+                id: event.event_id,
+                event_name: event.event_name,
+                event_date: event.event_date,
+                sell_through: event.sell_through,
+                ticket_price: event.ticket_price,
+                price_range: null,
+                ticket_price_currency: event.ticket_price_currency,
+                event_desc: event.event_desc,
+                event_image: event.event_image,
+                event_image_attribution: event.event_image_attribution,
+                event_image_attribution_link: event.event_image_attribution_link,
+                venue_id: event.venue_id,
+                venue_name: event.venue_name,
+                venue_address: event.venue_address,
+                venue_city: event.venue_city,
+                venue_postal_code: event.venue_postal_code,
+                venue_country: event.venue_country,
+                venue_latitude: event.venue_latitude,
+                venue_longitude: event.venue_longitude,
+                venue_email: event.venue_email,
+                user_id: event.user_id,
+                user_event_status: event.user_event_status
+                })
+            );
+
+            res.status(200).json(userEventsArr);
         })
         .catch((err) =>
             res.status(400).send(`Error retrieveing event with id ${req.userId}`)
