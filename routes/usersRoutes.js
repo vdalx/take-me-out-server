@@ -38,7 +38,7 @@ router.route('/profile/details')
     .put(updateProfileDetails)
 
 router.route('/profile/saved-events')
-    .get(getSavedEvents)
+    .get(authorize, getSavedEvents)
     .post(addSavedEvents)
     .put(updateSavedEvents)
     .delete(deleteSavedEvents);

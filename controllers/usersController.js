@@ -65,6 +65,7 @@ exports.getUser = (req, res) => {
         .where({ id: req.userId })
         .then(data => {
             const currentUser = {
+                userId: data[0].id,
                 username: data[0].username,
                 firstName: data[0].first_name,
                 lastName: data[0].last_name,
@@ -117,15 +118,34 @@ exports.updateProfileDetails = (req, res) => {
 
 exports.getSavedEvents = (req, res) => {
     knex('user_events')
-        .where({ 'user_events.user_id': req.params.id })
+        .where({ 'user_events.user_id': req.userId})
+        .select(
+            'user_events.user_event_status',
+            'user_events.user_id',
+            'user_events.event_id',
+            'events.event_name',
+            'events.event_date',
+            'events.ticket_price',
+            'events.sell_through',
+            'events.event_desc',
+            'events.event_image',
+            'events.event_image_attribution',
+            'events.event_image_attribution_link',
+            'events.venue_id',
+            'venues.venue_name',
+            'venues.venue_address',
+            'venues.venue_city',
+        )
+        .join('events','user_events.event_id', 'events.id')
+        .join('venues', 'events.venue_id', 'venues.id')
         .then((data) => {
             if(!data.length) {
-                return res.status(404).send(`Record with id: ${req.params.id} is not found`);
+                return res.status(404).send(`Record with id: ${req.userId} is not found`);
             }
-            res.status(200).json(data[0]);
+            res.status(200).json(data);
         })
         .catch((err) =>
-            res.status(400).send(`Error retrieveing event with id ${req.params.id}`)
+            res.status(400).send(`Error retrieveing event with id ${req.userId}`)
         );
 };
 
@@ -174,7 +194,7 @@ exports.updateSavedEvents = (req, res) => {
         .where({'user_events.event_id': req.body.event_id })
         .update(req.body)
         .then(() => {
-            res.status(200).send(`Event with id: ${req.body.event_id} has been updated`);
+            res.status(200).send(`Event with id: ${req.body.event_id} has been saved`);
         })
         .catch((err) =>
             res.status(400).send(`Error updating event with id: ${req.body.event_id}`)
@@ -182,15 +202,21 @@ exports.updateSavedEvents = (req, res) => {
 };
 
 exports.deleteSavedEvents = (req, res) => {
+    const { user_id, event_id } = req.body;
+
     knex('user_events')
-        .delete()
-        .where({ 'user_events.user_id': req.body.user_id }) //Need to fix this to target event_id
-        .then(() => {
-            res.status(204).send(`Event with id: ${req.body.event_id} has been deleted`);
+        .where({
+            user_id: user_id,
+            event_id: event_id
         })
-        .catch((err) =>
-            res.status(400).send(`Error deleting event with id: ${req.body.event_id}`)
-        );
+        .delete()
+        .then(() => {
+            res.status(204).send(`Event with id: ${event_id} has been deleted`);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(400).send(`Error deleting event with id: ${event_id}`);
+        });
 };
 
 exports.getSavedVenues = (req, res) => {
