@@ -82,22 +82,34 @@ exports.getUser = (req, res) => {
 };
 
 exports.updateUser = (req, res) => {
-   if (
-        !req.body.username ||
-        !req.body.email
-    ) {
-        return res.status(400).send(`Please make sure to provide all required fields`);
+
+    const { username, email, first_name, last_name, phone_number, location_city } = req.body;
+
+    // Check if required fields are provided
+    if (!username || !email) {
+        return res.status(400).send(`Please provide username and email`);
     }
 
+    const updateFields = {
+        username,
+        email,
+        first_name,
+        last_name,
+        phone_number,
+        location_city,
+        modified: knex.fn.now()
+    };
+
     knex('users')
-        .update(req.body)
-        .where({ id: req.userId })
+        .update(updateFields)
+        .where({ id: req.body.id })
         .then(() => {
             res.status(200).send(`User has been updated`);
         })
-        .catch((err) =>
-            res.status(400).send(`Error updating user`)
-        );
+        .catch((err) => {
+            console.error(`Error updating user: ${err}`);
+            res.status(400).send(`Error updating user`);
+        });
 };
 
 exports.deleteUser = (req, res) => {
