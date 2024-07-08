@@ -4,7 +4,6 @@
  */
 
 const testUserEvents = require('../seed_data/testUserSavedEvents');
-const testUserVenues = require('../seed_data/testUserSavedVenues');
 
 exports.seed = function (knex) {
   return knex('user_events')
