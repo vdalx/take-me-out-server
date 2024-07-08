@@ -11,11 +11,14 @@ const {
     getProfileDetails,
     addProfileDetails,
     updateProfileDetails,
-    deleteProfileDetails,
     getSavedEvents,
     addSavedEvents,
     updateSavedEvents,
-    deleteSavedEvents
+    deleteSavedEvents,
+    getSavedVenues,
+    addSavedVenues,
+    updateSavedVenues,
+    deleteSavedVenues
 } = require('../controllers/usersController');
 
 router.route('/signup')
@@ -33,12 +36,17 @@ router.route('/profile/details')
     .get(getProfileDetails)
     .post(addProfileDetails)
     .put(updateProfileDetails)
-    .delete(deleteProfileDetails);
 
-router.route('/events/saved')
-    .get(getSavedEvents)
+router.route('/profile/saved-events')
+    .get(authorize, getSavedEvents)
     .post(addSavedEvents)
     .put(updateSavedEvents)
     .delete(deleteSavedEvents);
+
+router.route('/profile/saved-venues')
+    .get(getSavedVenues)
+    .post(addSavedVenues)
+    .put(updateSavedVenues)
+    .delete(deleteSavedVenues);
 
 module.exports = router;
